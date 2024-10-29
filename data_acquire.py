@@ -72,22 +72,45 @@ def seq_pdb(pdb_lst, sequence_judge = True):
 def seq_uniprot(uniprot_id, protein_name):
     dir_seq = './sequence_uni'
     os.makedirs(dir_seq, exist_ok=True)
-    uniprot = Uniprot(uniprot_id, local_download_dir=dir_seq, save_txt=True)
-    sequence = str(uniprot.category_lines['SQ']).split("'")[1]
-    fasta_format = f">{uniprot_id} {protein_name}\n{sequence}\n"
-    with open(dir_seq + "/" + f'{uniprot_id}.fasta', 'w') as fasta_file:
-        fasta_file.write(fasta_format)
-    os.remove(dir_seq + "/" + f'{uniprot_id}.txt')
+    try:
+        uniprot = Uniprot(uniprot_id, local_download_dir=dir_seq, save_txt=True)
+        sequence = str(uniprot.category_lines['SQ']).split("'")[1]
+        fasta_format = f">{uniprot_id} {protein_name}\n{sequence}\n"
+        with open(dir_seq + "/" + f'{uniprot_id}.fasta', 'w') as fasta_file:
+            fasta_file.write(fasta_format)
+        os.remove(dir_seq + "/" + f'{uniprot_id}.txt')
+    except Exception as e:
+        with open("error_log/acquire_seq_uni_err.log.txt", "a") as f:
+            f.write(f"an error occured for {uniprot_id}: {e}\n")
 
 
+def seq_integrate(uniprot_id):
+    os.makedirs("./sequence_uni_all", exist_ok=True)
+    try:
+        with open("./sequence_uni_all/all_sequence.fasta", "a+") as all_file:
+                with open('./sequence_uni' + "/" + f'{uniprot_id}.fasta', 'r') as pre_file:
+                    all_file.write(pre_file.read())
+    except Exception as e:
+        with open("error_log/acquire_seq_integrate_err.log.txt", "a") as f:
+            f.write(f"an error occured all_seq for {uniprot_id}: {e}\n")
+
+
+os.makedirs("error_log", exist_ok=True)
 ## 数据下载
 pdb_lst = ["4B3E", "2FAT"] # 目标列表
-seq_pdb(pdb_lst)
+# seq_pdb(pdb_lst)
 
 # 设置Uniprot ID和蛋白质名称
+with open("uniprot_pdb", "r") as f:
+    context = f.readlines()
+for count in range(1, len(context)):
+    uniprot_ids = context[count].split(",")[0]
+    seq_uniprot(uniprot_ids, "example protein")
+    seq_integrate(uniprot_ids)
+
 uniprot_id = "P01116"
 protein_name = "Example Protein"
-seq_uniprot(uniprot_id, protein_name)
+# seq_uniprot(uniprot_ids, protein_name)
 
 
 

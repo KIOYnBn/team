@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640888c8-b2ae-4772-85ad-dab14fd33830" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/test_two.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-standard.py" beforeDir="false" afterPath="$PROJECT_DIR$/data-standard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_acquire.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_acquire.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sequence_uni/P01116.fasta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_two.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_two.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +86,8 @@
       <workItem from="1729962742387" duration="83000" />
       <workItem from="1730044209785" duration="6940000" />
       <workItem from="1730074760103" duration="17016000" />
+      <workItem from="1730135995277" duration="1034000" />
+      <workItem from="1730202861415" duration="5990000" />
     </task>
     <servers />
   </component>
@@ -94,8 +95,8 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/team$test1.coverage" NAME="test1 覆盖结果" MODIFIED="1730107521900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/team$data_acquire.coverage" NAME="data_acquire 覆盖结果" MODIFIED="1730116656450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/team$test1.coverage" NAME="test1 覆盖结果" MODIFIED="1730204721260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/team$data_acquire.coverage" NAME="data_acquire 覆盖结果" MODIFIED="1730206108114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/team$test_two.coverage" NAME="test_two 覆盖结果" MODIFIED="1730115889365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/team$test.coverage" NAME="test 覆盖结果" MODIFIED="1729962753738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

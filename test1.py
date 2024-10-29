@@ -1,19 +1,18 @@
-from Bio.PDB import *
-from Bio import SeqIO
+from icecream import ic
+import os
 
-# Bio初始化
-pdbl = PDBList()
-parser = PDBParser(QUIET=True)
-ppb = PPBuilder()
-## 数据下载
-pdb_lst = ["5FQD", "2FAT"] # 目标列表
+def seq_integrate(uniprot_id):
+    os.makedirs("./sequence_uni_all", exist_ok=True)
+    with open("./sequence_uni_all/all_sequence.fasta", "a+") as all_file:
+            with open('./sequence_uni' + "/" + f'{uniprot_id}.fasta', 'r') as pre_file:
+                all_file.write(pre_file.read())
 
 
-for count in range(len(pdb_lst)):
-    pdbl.retrieve_pdb_file(pdb_lst[count],pdir='.', file_format='pdb')
-    file_path = f'pdb{pdb_lst[count].lower()}.ent'
-    file_path_mid = f'./pdb_sequence/{pdb_lst[count]}'
-    with open(file_path) as handle:
-        sequence = next(SeqIO.parse(handle, "pdb-atom"))
-    with open(file_path, "w") as output_handle:
-        SeqIO.write(sequence, output_handle, "fasta")
+with open("uniprot_pdb", "r") as f:
+    con = f.readlines()
+ic(con)
+
+for count in range(1, 10):
+    a = con[count].split(",")[0]
+    ic(a)
+    seq_integrate(a)
