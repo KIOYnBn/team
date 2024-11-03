@@ -1,0 +1,2 @@
+2024-11-03 22:25:53: an error occured for 3lq8: Found array with 0 sample(s) (shape=(0, 3)) while a minimum of 1 is required by check_pairwise_arrays.
+2024-11-03 22:30:10: an error occured for 3lq8: Found array with 0 sample(s) (shape=(0, 3)) while a minimum of 1 is required by check_pairwise_arrays.
